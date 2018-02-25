@@ -1,0 +1,36 @@
+.container {
+    max-width: 780px;
+}
+
+.example-card {
+    width: 360px;
+    height: 210px;
+    border-radius: 15px;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.example-container>* {
+    width: 100%;
+}
+
+.input-group-text {
+    background-color: #ffffff;
+    border-radius: 0px;
+}
+
+.btn,
+.form-control {
+    border-radius: 0px;
+}
+
+.mat-card {
+    padding: 15px;
+}

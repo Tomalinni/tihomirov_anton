@@ -1,0 +1,142 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mt-5">
+            <form class="needs-validation" novalidate>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <h5 class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-muted">Данные отправителя</span>
+                        </h5>
+                        <div align="center">
+                            <mat-card class="example-card" onLoad=showImage1()>
+                                <mat-card-header>
+                                    <div class="container" align="end">
+                                        <img class="navbar-brand-logo" id="rrr1" src="../assets/0.jpg" name="tool">
+                                    </div>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <div class="example-container">
+                                        <mat-form-field>
+                                            <label for="cc-number">Номер карты</label>
+                                            <input type="text" id="fut1" onchange="showImage1()" matInput>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-7" align="left">
+                                            <label for="cc-number">Срок действия</label>
+                                        </div>
+                                        <div class="col-5" align="left">
+                                            <label for="cc-number">CW/CVV <img src="../assets/tooltip.svg"></label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <span class="col-md-3 col-sm-3 col-3" style="padding-right: 0px;">
+                                    <mat-form-field style="width: 75%;">
+                                      <mat-select placeholder="ММ">
+                                        <mat-option value="option2">02</mat-option>
+                                        <mat-option value="option2">03</mat-option>
+                                        <mat-option value="option2">04</mat-option>
+                                        <mat-option value="option2">05</mat-option>
+                                        <mat-option value="option2">06</mat-option>
+                                        <mat-option value="option2">07</mat-option>
+                                        <mat-option value="option2">08</mat-option>
+                                        <mat-option value="option2">09</mat-option>
+                                        <mat-option value="option2">10</mat-option>
+                                        <mat-option value="option2">11</mat-option>
+                                        <mat-option value="option2">12</mat-option>
+                                      </mat-select>
+                                    </mat-form-field>
+                                </span>
+                                        <span style="padding-top: 5px; font-size: 30px;"> /</span>
+                                        <span class="col-md-5 col-sm-5 col-5" style="margin-left: -30px; padding-left: 0px;">
+                                    <mat-form-field style="width: 40%;">
+                                      <mat-select placeholder="ГГ">
+                                        <mat-option value="option2">2018</mat-option>
+                                        <mat-option value="option2">2019</mat-option>
+                                        <mat-option value="option2">2020</mat-option>
+                                        <mat-option value="option2">2021</mat-option>
+                                        <mat-option value="option2">2022</mat-option>
+                                        <mat-option value="option2">2023</mat-option>
+                                        <mat-option value="option2">2024</mat-option>
+                                        <mat-option value="option2">2025</mat-option>
+                                        <mat-option value="option2">2026</mat-option>
+                                        <mat-option value="option2">2027</mat-option>
+                                        <mat-option value="option2">2028</mat-option>
+                                      </mat-select>
+                                    </mat-form-field>
+                                  </span>
+                                        <div class="col-md-3 col-sm-3 col-3" style="padding-left: 0px;">
+                                            <mat-form-field style="width: 100%;">
+                                                <input type="text" matInput maxlength="3" size="3">
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <h5 class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-muted">Данные получателя</span>
+                        </h5>
+                        <div align="center">
+                            <mat-card class="example-card" onLoad=showImage2()>
+                                <mat-card-header>
+                                    <div class="container" align="end">
+                                        <img class="navbar-brand-logo" id="rrr2" src="../assets/0.jpg" name="tool">
+                                    </div>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <div class="example-container">
+                                        <mat-form-field>
+                                            <label for="cc-number">Номер карты</label>
+                                            <input type="text" id="fut2" onchange="showImage2()" matInput>
+                                        </mat-form-field>
+                                    </div>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" checked="true" class="custom-control-input" id="check">
+                                    <label class="custom-control-label" for="check">отправить чек на email</label>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="email" placeholder="Ваш e-mail" onkeyup="checkParams()" required>
+                            </div>
+                        </div>
+                        <label class="text-muted" for="transferAmount">Сумма перевода</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="transferAmount" placeholder="от 500 до 500000" maxlength="6" size="6" onkeyup="checkParams()" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2">BYN</span>
+                            </div>
+                        </div>
+                        <label class="text-muted" for="totalAmount">Итоговая сумма</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="totalAmount" placeholder="от 680 до 530150" maxlength="6" size="6" onkeyup="checkParams()" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2">BYN</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="save-info">
+                            <label class="custom-control-label" for="save-info">Добавить сообщение получателю <img src="../assets/tooltip.svg" alt="" srcset=""></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <button class="btn btn-success btn-block" type="submit" id="submit" disabled>Перевести</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
