@@ -3,7 +3,6 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0-beta.1.
 
 Run project:
-
 1. npm install
 2. npm start
 
