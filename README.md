@@ -6,6 +6,39 @@ Run project:
 1. npm install
 2. npm start
 
+3.(optional)
+If you have this problem:
+
+ 91% additional chunk assets processingError: ENOENT: no such file or directory, open 'C:\..........\form\form-ui\node_modules\jquery\dist\jquery.js'
+
+in .angular-cli.json change:
+
+ "styles": [
+        "../../form-ui/node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "styles.css"
+      ],
+      "scripts": [
+        "../../form-ui/node_modules/jquery/dist/jquery.js",
+        "../../form-ui/node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "../../form-ui/node_modules/bootstrap/dist/js/bootstrap.js",
+        "config.js"
+
+      ],
+
+to:
+
+"styles": [
+            "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+            "styles.css"
+        ],
+        "scripts": [
+            "../node_modules/jquery/dist/jquery.js",
+            "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+            "../node_modules/bootstrap/dist/js/bootstrap.js",
+            "config.js"
+
+        ],
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
